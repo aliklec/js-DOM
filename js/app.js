@@ -10,6 +10,11 @@ document.getElementById("name1").innerHTML =
 "Tay-Tay";
 
 
+//can also just do name1.innerHTML = "taytay"//
+
+
+
+
 /*2. DJ Khaled
 
 Find the div with the id of "position2" and replace the n/a with the following: 
@@ -17,6 +22,16 @@ Find the div with the id of "position2" and replace the n/a with the following:
 Project Manager*/
 
 document.getElementById("position2").innerHTML = "Project Manager";
+
+/* 
+
+can also do:
+var NEW = document.getElementById("position2")
+
+NEW.innerHTML = "Project Manager"
+
+
+ */
 
 /*3. Piko Taro
 
@@ -31,12 +46,13 @@ document.getElementById("alias3").innerHTML = "Concatenation*";
 
 Find the div with the class name of "profile" and replace the n/a with a verse from your favorite Prince song.*/
 
-
+/*
 var x = document.getElementsByClassName("profile");
 
-x[0].innerHTML = ' "A body like yours oughta be in jail, cuz its on the verge of bein obscene"';
+x[0].innerHTML = ' "A body like yours oughta be in jail, cuz its on the verge of bein obscene"';*/
 
-
+var profileElem = document.getElementsByClassName("profile");
+console.log(profileElem);
 
 /*5. Bruce Lee
 
@@ -88,32 +104,36 @@ aliasParent.appendChild(newDiv2);
 var findimg = document.images[8].src;
 findimg.id = "myImg";*/
 
-var newImg = document.createElement("img");
-newImg.setAttribute("src","../assets/ali.jpg");
+/*var rrrg = document.getElementsByClassName("block3 col-sm-4")[2];
 
-document.getElementById("myImg").src = "../assets/ali.jpg";
+var getimage = document.getElementsByTagName("img");
 
-/*
-
-var booya = document.getElementsByClassName("block3 col-sm-4");
-var getbooya = booya[0];
-
-document.getbooya.appendChild(newprofilediv);
-getbooya.innerHTML = "aaargh";
-
-var newprofilediv = document.createElement("div");
-var newContent = document.createTextNode ("Alison K");
-newContent.id = "frustrated";
-newprofilediv.appendChild(newContent);
-
-var frustrated = getbooya.appendChild(newprofilediv);
+getimage[8].src = "https://media1.popsugar-assets.com/files/thumbor/mWmHSJ8u4mf327CMNlIsx_MORzY/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2012/11/47/2/192/1922243/3431091907fc0047_GageTucker/i/Cute-Smush-Faced-Cats.jpg";
 */
 
+var imgBox = document.getElementsByTagName("img");
+console.log(imgBox);
+imgBox[8].src = "../assets/ali.jpg";
 
-/*var someimage = document.getElementById('this_one');
-var myimg = someimage.getElementsByTagName('img')[0];
-var mysrc = myimg.src;
+var orange = document.getElementsByClassName("block3 col-sm-4");
+console.log(orange);
 
+var nameBox = document.createElement("div");
+nameBox.id = "name9";
+nameBox.innerHTML = "Swarly";
+orange[2].appendChild(nameBox);
 
+var positionBox = document.createElement("div");
+positionBox.id = "position9";
+positionBox.innerHTML = "Operations and Events";
+orange[2].appendChild(positionBox);
 
-    /*does not function without Java in the morning*/
+var aliasBox = document.createElement("div");
+aliasBox.id = "alias8";
+aliasBox.innerHTML = 'The debugger';
+orange[2].appendChild(aliasBox);
+
+var bioBox = document.createElement("div");
+bioBox.id = "bio8";
+bioBox.innerHTML = ' "I do not function without my java in the morning" ';
+orange[2].appendChild(bioBox);
